@@ -1,17 +1,18 @@
 {
-  "name": "er-t6",
+  "name": "react-electron-app",
   "version": "0.1.0",
   "private": true,
+  "author": "Kavin Varnan",
+  "description": "Sample app",
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "nf start",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "react-scripts build && node_modules/.bin/build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +22,22 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "electron": "^3.0.13",
+    "electron-builder": "^20.38.3",
+    "foreman": "^3.0.1"
+  },
+  "homepage": "./",
+  "main": "electron/main.js",
+  "build": {
+    "extends": null,
+    "productName": "Example App",
+    "appId": "com.example.app",
+    "electronVersion": "3.0.12",
+    "files": [
+      "build/**/*",
+      "electron/*"
+    ]
+  }
 }
